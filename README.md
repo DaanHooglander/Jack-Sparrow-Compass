@@ -75,3 +75,18 @@ Secondary function:
 8. Every two minutes the calculation of the nearest McDonald's will be remade. The assumption is that the GPS coordinates do not change drastically over time, so they do not need to be updated as frequently as the header direction.
 
 
+=== [ 4 ] === Description of the code
+
+Void 1: GPS()
+
+Using the TinyGPS++.h library the GPS coordinate will be triangulated and stored in the flash memory as doubles 'latitude' and 'longitude.' The reception of the transmission is done in a while-loop. The function is set up in a way that the different problems can be troubleshot when there is no GPS found.
+- Serial1.avaialble: Using the integrated serial reader of the ATmega under Serial1 protocol, the system checks whether a signal is coming through. If not, the pins are incorrectly connected, or the signal is not being read.
+- gps.encode: If a signal comes through it needs to be encoded. The signal needs to be understood and decipher using the protocols of the library.
+- gps.location.isValid: While a transmission is coming through and has been correctly read, that does not mean that the result necessarily makes sense. This line verifies whether the result corresponds with what could be coordinates.
+- If all of that checks out, the signal will be read. Because of the nature of triangulation, the first ping of a satellite won't be accurate. It takes time to find an accurate fix, so after 50 succesful pings, the coordinates will be stored in the flas memory.
+
+- If the signal can be read correctly and all of the components are working as they should be, but there is still no GPS location, that means that the module hasn't succesfully connected with the necessary satellites yet. In this case a message will be printed saying the location is not valid, indicating the problem does not lie in the earlier mentioned causes.
+
+Void 2: MotorCalibrate()
+
+
