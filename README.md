@@ -16,7 +16,8 @@ Arduino: ATmega2560
   !! This code only works for an ATmega2560. When using a different microcontroller, make sure the serial and reception/transmission protocols work. 
   Possibly additional libraries are required when using a different model.
 
-GPS Module: Neo-8M
+- GPS Module: Neo-8M
+
 library: TinyGPS++.h   (not in standard Arduino database)
 test
 
