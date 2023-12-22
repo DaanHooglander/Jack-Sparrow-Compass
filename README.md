@@ -97,4 +97,33 @@ Stepper motors consume electricity in stationary position and maintain their tor
 
 Void 4: ReadHeading()
 
+- Compass.read: This function allows the library of the Magnetometer to read the x, y an z axis in regards to the north respectively. The library will then decipher the signal.
 
+- HeadingRadians: The heading will be calculated using the atan2 function on the x- and y-axis. The result is an angle in radians.
+
+- Once again, the sensor could have trouble starting up, so the heading will be stored after the 20th signal that comes through.
+
+Void 5: FindMacAndRotation()
+
+- With a for-loop, the two dimensional array with the coordinates will be considered. A simple calculation using the deltas between GPS and McDonald's will be performed, followed by pythagoras to find the distance.
+- By repeating this process for every instance of the array and comparing the last value to the one prior, it can be determined what the shortest distance is. This distance will be stored to the flash memory after the for-loop is done and the entire array has been examined.
+- Using the deltas between the GPS and recently found nearest McDonald's, an angle can be calculated using the atan2 function. This will be the rotational angle that the motor has to spin. This value will have a 90° correction because the starting point for the angle and calibration point for the motor do not lie in the same position.
+
+Void 6: UpdateSystem()
+
+The above mentioned void functions will be called upon accordingly to make sure the system will calibrate, find its GPS, find the nearest McDonald's and rotation, heading and make the motor spin.
+
+Void 7: UpdatePointer()
+
+As earlier mentioned, the pointer should be updated more frequently than the entire system, so this process has its own void function with the GPS and calculations left out.
+
+
+SETUP:
+
+In the setup, the system will initialize the necessary components once, and run the UpdateSystem function.
+
+LOOP:
+
+- In the loop, the pointer will be updated every three seconds.
+- The motor will be calibrated every minute to account for snowballing inaccuracies.
+- The GPS will repeat its triangulation every two minutes to account for movement, to make sure that the pointer will be accurately updated according to a change in position.
