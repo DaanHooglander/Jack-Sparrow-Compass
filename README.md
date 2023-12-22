@@ -22,11 +22,13 @@ Current version libraries should not be difficult to find with the following inf
   library: TinyGPS++.h   (not in standard Arduino database)
 
 
-Magnetometer: QMC5883L
+- Magnetometer: QMC5883L
+
 library: QMC5883L.h    (not in standard Arduino database)
 
 - Stepper motor: 28BYJ-48
 - Motor Driver: ULN2003
+
   library: stepper.h      (in Arduino database)
 
 - Hall Effect Sensor: Standard model
