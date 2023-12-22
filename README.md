@@ -4,7 +4,7 @@ In this ReadMe:
  3. Description of the code
  4. 
 
-
+This project was created as an elective project for the Bachelor's degree in Mechanical Engineering. As a mechanical engineer, we received little education on the field of programming and mechatronics, so I used this elective project to teach myself more about it. The code is not perfect and it will be updated according to personal development wishes.
 
 === [ 1 ] ===
 Link to 3D files of final product: https://www.printables.com/model/688733-jack-sparrow-compass
@@ -45,4 +45,5 @@ Non essential components used in my personal setup:
 - Voltage Regulator 7-12V > 5V
 
 
-=== [ 3 ] ===
+=== [ 3 ] === Description of the code:
+This project was created as an elective project for the Bachelor's degree in Mechanical Engineering. As a mechanical engineer, we received little education on the field of programming and mechatronics, so I used this elective project to teach myself more about it. The
