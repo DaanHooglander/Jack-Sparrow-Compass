@@ -81,12 +81,20 @@ Void 1: GPS()
 
 Using the TinyGPS++.h library the GPS coordinate will be triangulated and stored in the flash memory as doubles 'latitude' and 'longitude.' The reception of the transmission is done in a while-loop. The function is set up in a way that the different problems can be troubleshot when there is no GPS found.
 - Serial1.avaialble: Using the integrated serial reader of the ATmega under Serial1 protocol, the system checks whether a signal is coming through. If not, the pins are incorrectly connected, or the signal is not being read.
-- gps.encode: If a signal comes through it needs to be encoded. The signal needs to be understood and decipher using the protocols of the library.
+- gps.encode: If a signal comes through it needs to be encoded. The signal needs to be understood and deciphered using the protocols of the library.
 - gps.location.isValid: While a transmission is coming through and has been correctly read, that does not mean that the result necessarily makes sense. This line verifies whether the result corresponds with what could be coordinates.
 - If all of that checks out, the signal will be read. Because of the nature of triangulation, the first ping of a satellite won't be accurate. It takes time to find an accurate fix, so after 50 succesful pings, the coordinates will be stored in the flas memory.
 
 - If the signal can be read correctly and all of the components are working as they should be, but there is still no GPS location, that means that the module hasn't succesfully connected with the necessary satellites yet. In this case a message will be printed saying the location is not valid, indicating the problem does not lie in the earlier mentioned causes.
 
 Void 2: MotorCalibrate()
+
+The motor does not know its position, so it needs to calibrate before the angle of rotation is given. Using this function, the motor will spin and turn itself off when the Hall Effect Sensor detects the magnet passing by.
+
+Void 3: turnOffMotorPins()
+
+Stepper motors consume electricity in stationary position and maintain their torque. This means that the motor will behave as if it were spinning even while standing still, meaning that if left on it will heat up considerably. To prevent overheating the components the pins can be turned off during a period where no rotation is required. A compass pointer does not need to maintain its torque, so there is no problem powering off the control pins.
+
+Void 4: ReadHeading()
 
 
