@@ -29,7 +29,7 @@ Current version libraries should not be difficult to find with the following inf
 
 - Magnetometer: QMC5883L
 
-library: QMC5883L.h    (not in standard Arduino database)
+  library: QMC5883L.h    (not in standard Arduino database)
 
 - Stepper motor: 28BYJ-48
 - Motor Driver: ULN2003
@@ -37,7 +37,7 @@ library: QMC5883L.h    (not in standard Arduino database)
   library: stepper.h      (in Arduino database)
 
 - Hall Effect Sensor: Standard model
-- 
+
 
 Non essential components used in my personal setup:
 
