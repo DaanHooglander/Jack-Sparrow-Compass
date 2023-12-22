@@ -2,10 +2,13 @@ In this ReadMe:
  1. Link to 3D files of compass physical product.
  2. Required components and libraries.
  3. Description of the code
+ 4. 
+
 
 
 === [ 1 ] ===
 Link to 3D files of final product: https://www.printables.com/model/688733-jack-sparrow-compass
+
 
 === [ 2 ] ===
 Essential Arduino Components and libraries:
@@ -34,9 +37,12 @@ library: QMC5883L.h    (not in standard Arduino database)
   library: stepper.h      (in Arduino database)
 
 - Hall Effect Sensor: Standard model
+- 
 
 Non essential components used in my personal setup:
+
 - 3.7V 14500 Li-ion battery (2x)
 - Voltage Regulator 7-12V > 5V
+
 
 === [ 3 ] ===
