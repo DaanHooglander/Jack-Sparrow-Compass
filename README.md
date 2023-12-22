@@ -57,4 +57,14 @@ An API has been considered, to communicate with an external database like Google
 
 The compass has been designed to point to the nearest McDonald's. This is done by the following steps:
 1. Calibrating the compass-pointer. The stepper motor can position the pointer with an accuracy of 2048 steps per rotation, but this specific motor does not know where the pointer is after it has been used, so it will calibrate at the start of the process to a set position using a magnet and a Hall Effect Sensor.
-2. Triangulating a GPS position. The GPS module will
+2. Triangulating a GPS position. The GPS module will find its own coordinates. This can take a couple of minutes. The result will be a latitude and longitude.
+3. Using the GPS coordinate, a trigonometric calculation will be made to determine what the closest McDonald's is, and what the required angle is to drive the pointer.
+4. The heading in regards to the north will be detemined using a magnetometer. This is done in case the compass has not been aligned to the north. That way, it can compensate for any direction it is headed in and still point the correct way.
+5. Using the determined angle and heading, the motor will be powered to take the specified steps and point to the nearest McDonald's
+
+
+6. After the initial process, the pointer will be updated every three seconds in case the heading has changed.
+7. Since the magnetometer is not prefectly accurate, the updating of the pointer can lead to an accumulation of inaccuracies and result in a wrong direction, so every minute the pointer will be calibrated and repositioned.
+8. Every two minutes the calculation of the nearest McDonald's will be remade. The assumption is that the GPS coordinates do not change drastically over time, so they do not need to be updated as frequently as the header direction.
+
+
