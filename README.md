@@ -1,3 +1,5 @@
+Link to 3D files of final product: https://www.printables.com/model/688733-jack-sparrow-compass
+
 Essential Arduino Components and libraries:
 - Arduino: ATmega2560
   !! This code only works for an ATmega2560. When using a different microcontroller, make sure the serial and reception/transmission protocols work. 
