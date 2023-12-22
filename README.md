@@ -9,7 +9,9 @@ Link to 3D files of final product: https://www.printables.com/model/688733-jack-
 
 === [ 2 ] ===
 Essential Arduino Components and libraries:
+
 Links to libraries are not provided as libraries quickly become obsolete.
+
 Current version libraries should not be difficult to find with the following information.
 
 - Arduino: ATmega2560
