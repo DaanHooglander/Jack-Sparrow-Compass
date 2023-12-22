@@ -48,8 +48,12 @@ Non essential components used in my personal setup:
 === [ 3 ] === Functionality of the product and context.
 The compass is based on Jack Sparrow's magic compass of the Pirates Of The Caribbean movie series, where the compass will point to whatever the person holding it desires most in life.
 This compass was created to always point to the nearest McDonald's. However, it does not work everywhere around the planet.
+
+About the McDonald's locations:
 The code contains an array of coordinates of (supposedly) every McDonald's in The Netherlands, my country of residence, and every McDonald's in Vienna. 
 Later in this file it will be explained how the array is implemented in the code, but if preferable this array could be swapped out for an array with different coordinates for different locations.
 An API has been considered, to communicate with an external database like Google Maps to apply this compass worldwide. The scope of the project stretched to making a functional compass within a certain amount of time, but not to making a perfect compass that works everywhere. The easier option of a data-array was chosen.
 
-The compass has been designed to point to the nearest McDonald's. This is done by pinpointing GPS coordin
+The compass has been designed to point to the nearest McDonald's. This is done by the following steps:
+1. Calibrating the compass-pointer. The stepper motor can position the pointer with an accuracy of 2048 steps per rotation, but this specific motor does not know where the pointer is after it has been used, so it will calibrate at the start of the process to a set position using a magnet and a Hall Effect Sensor.
+2. Triangulating a GPS position. The GPS module will
