@@ -1,8 +1,8 @@
 In this ReadMe:
  1. Link to 3D files of compass physical product.
  2. Required components and libraries.
- 3. Description of the code
- 4. 
+ 3. Functionality of the product and context.
+ 4. Description of the code.
 
 This project was created as an elective project for the Bachelor's degree in Mechanical Engineering. As a mechanical engineer, we received little education on the field of programming and mechatronics, so I used this elective project to teach myself more about it. The code is not perfect and it will be updated according to personal development wishes.
 
@@ -36,7 +36,7 @@ Current version libraries should not be difficult to find with the following inf
 
   library: stepper.h      (in Arduino database)
 
-- Hall Effect Sensor: Standard model
+- Hall Effect Sensor: Standard model + magnet.
 
 
 Non essential components used in my personal setup:
@@ -45,5 +45,11 @@ Non essential components used in my personal setup:
 - Voltage Regulator 7-12V > 5V
 
 
-=== [ 3 ] === Description of the code:
-This project was created as an elective project for the Bachelor's degree in Mechanical Engineering. As a mechanical engineer, we received little education on the field of programming and mechatronics, so I used this elective project to teach myself more about it. The
+=== [ 3 ] === Functionality of the product and context.
+The compass is based on Jack Sparrow's magic compass of the Pirates Of The Caribbean movie series, where the compass will point to whatever the person holding it desires most in life.
+This compass was created to always point to the nearest McDonald's. However, it does not work everywhere around the planet.
+The code contains an array of coordinates of (supposedly) every McDonald's in The Netherlands, my country of residence, and every McDonald's in Vienna. 
+Later in this file it will be explained how the array is implemented in the code, but if preferable this array could be swapped out for an array with different coordinates for different locations.
+An API has been considered, to communicate with an external database like Google Maps to apply this compass worldwide. The scope of the project stretched to making a functional compass within a certain amount of time, but not to making a perfect compass that works everywhere. The easier option of a data-array was chosen.
+
+The compass has been designed to point to the nearest McDonald's. This is done by pinpointing GPS coordin
