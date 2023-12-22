@@ -18,7 +18,7 @@ Current version libraries should not be difficult to find with the following inf
 
 - GPS Module: Neo-8M
 library: TinyGPS++.h   (not in standard Arduino database)
-test
+
 
 - Magnetometer: QMC5883L
   library: QMC5883L.h    (not in standard Arduino database)
