@@ -50,6 +50,7 @@ The compass is based on Jack Sparrow's magic compass of the Pirates Of The Carib
 This compass was created to always point to the nearest McDonald's. However, it does not work everywhere around the planet.
 
 About the McDonald's locations:
+
 The code contains an array of coordinates of (supposedly) every McDonald's in The Netherlands, my country of residence, and every McDonald's in Vienna. 
 Later in this file it will be explained how the array is implemented in the code, but if preferable this array could be swapped out for an array with different coordinates for different locations.
 An API has been considered, to communicate with an external database like Google Maps to apply this compass worldwide. The scope of the project stretched to making a functional compass within a certain amount of time, but not to making a perfect compass that works everywhere. The easier option of a data-array was chosen.
