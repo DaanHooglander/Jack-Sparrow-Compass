@@ -18,7 +18,7 @@ Arduino: ATmega2560
 
 - GPS Module: Neo-8M
 
-library: TinyGPS++.h   (not in standard Arduino database)
+  library: TinyGPS++.h   (not in standard Arduino database)
 test
 
 test
